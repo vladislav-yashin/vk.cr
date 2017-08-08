@@ -1,0 +1,9 @@
+name: vk.cr
+version: 0.1.0
+
+authors:
+  -  <funkthis>
+
+crystal: 0.23.1
+
+license: MIT
