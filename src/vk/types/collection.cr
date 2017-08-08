@@ -4,7 +4,7 @@ class VK::Collection < VK::BaseObject
   def initialize(data : JSON::Any)
     @data = [] of Any
     data.each do |v|
-      @data << VK::Item.new(v)
+      @data << (Item.new(v) rescue Scalar.new(v))
     end
   end
 
