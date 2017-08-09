@@ -14,7 +14,7 @@ class VK::Client
 
   def request(method_name, params = {} of String => RequestParam)
     headers = HTTP::Headers{ "Content-Type" => "application/x-www-form-urlencoded" }
-    response = HTTP::Client.post("https://api.VK.com/method/#{method_name}", headers, build_request_body(params))
+    response = HTTP::Client.post("https://api.vk.com/method/#{method_name}", headers, build_request_body(params))
     Item.new(JSON.parse(response.body))
   end
 
